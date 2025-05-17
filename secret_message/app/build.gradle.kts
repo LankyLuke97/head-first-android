@@ -35,6 +35,8 @@ android {
     }
 }
 
+val nav_version: String by rootProject.extra
+
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -42,6 +44,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
