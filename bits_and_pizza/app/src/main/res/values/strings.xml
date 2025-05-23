@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Bits and Pizza</string>
+    <string name="diavolo">Diavolo</string>
+    <string name="funghi">Funghi</string>
+    <string name="parmesan">Parmesan</string>
+    <string name="chilli_oil">Chilli oil</string>
+    <string name="pizza_type_text">Which type of pizza would you like?</string>
+    <string name="extras_text">Please choose any extras:</string>
+    <string name="choose_pizza_toast">You need to chose a pizza type</string>
 </resources>
