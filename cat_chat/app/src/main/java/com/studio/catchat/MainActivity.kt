@@ -10,6 +10,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.onNavDestinationSelected
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +23,8 @@ class MainActivity : AppCompatActivity() {
         val builder = AppBarConfiguration.Builder(navController.graph)
         val appBarConfiguration = builder.build()
         toolbar.setupWithNavController(navController, appBarConfiguration)
+        val bottomNavView = findViewById<BottomNavigationView>(R.id.bottom_nav)
+        bottomNavView.setupWithNavController(navController)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
