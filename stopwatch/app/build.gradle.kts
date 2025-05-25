@@ -7,6 +7,10 @@ android {
     namespace = "com.studio.stopwatch"
     compileSdk = 35
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.studio.stopwatch"
         minSdk = 26
