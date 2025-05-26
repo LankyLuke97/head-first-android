@@ -7,6 +7,10 @@ android {
     namespace = "com.studio.bitsandpizza"
     compileSdk = 35
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.studio.bitsandpizza"
         minSdk = 26
