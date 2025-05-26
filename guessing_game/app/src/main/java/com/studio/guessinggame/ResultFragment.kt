@@ -7,20 +7,23 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import com.studio.guessinggame.databinding.FragmentResultBinding
+import androidx.lifecycle.ViewModelProvider
 
 class ResultFragment : Fragment() {
     private var _binding: FragmentResultBinding? = null
     private val binding get() = _binding!!
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    private lateinit var viewModel: ResultViewModel
+    private lateinit var viewModelFactory: ResultViewModelFactory
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _binding = FragmentResultBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        binding.wonLost.text = ResultFragmentArgs.fromBundle(requireArguments()).result
+        val result = ResultFragmentArgs.fromBundle(requireArguments()).result
+        viewModelFactory = ResultViewModelFactory(result)
+        viewModel = ViewModelProvider(this, viewModelFactory)[ResultViewModel::class.java]
+
+        binding.wonLost.text = viewModel.result
 
         binding.newGameButton.setOnClickListener {
             view.findNavController().navigate(R.id.action_resultFragment_to_gameFragment)
