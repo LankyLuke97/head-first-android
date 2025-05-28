@@ -6,4 +6,5 @@
     <string name="you_have_lives_left">You have %1$d lives left</string>
     <string name="incorrect_guesses">Incorrect guesses: %1$s</string>
     <string name="start_new_game">Start new game</string>
+    <string name="finish_game">Finish Game</string>
 </resources>
